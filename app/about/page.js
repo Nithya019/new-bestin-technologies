@@ -1,13 +1,7 @@
 "use client";
 import Image from "next/image";
 import CoreValues from "./CoreValues";
-import {
-  motion,
-  MotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import { TextFade } from "../../components/motion/TextFade";
 
 export default function About() {

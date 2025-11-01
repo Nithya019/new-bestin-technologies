@@ -22,15 +22,23 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        navBg ? "bg-black/[.50] py-6 bg-opacity-1 shadow-lg text-white" : "bg-transparent text-white py-12"
+        navBg
+          ? "bg-black/[.50] py-6 bg-opacity-1 shadow-lg text-white"
+          : "bg-transparent text-white py-12"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-xl">
-        <Link href="/" className="text-xl font-bold">
-          Logo
+        <Link href="/" className="text-4xl font-bold">
+          <div>
+            <p>
+              <span className="text-[#4ff0b7]">B</span>estin
+            </p>
+            <p>
+              <span className="text-[#4ff0b7]">T</span>echnologies
+            </p>
+          </div>
         </Link>
         <ul className="flex space-x-6">
-         
           <NavLinks />
         </ul>
       </div>
