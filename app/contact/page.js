@@ -11,7 +11,7 @@ const Contact = () => {
         className="relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
       >
 
-      <Image src="/images/contactUsForm.avif" style={{objectFit: "cover"}} alt="Contact Us" fill/>
+      <Image src="/images/contactHeroImg.avif" className="object-center object-cover" alt="Contact Us" fill/>
       </div>
       <div className="container px-6 md:px-12">
         <div className="block rounded-lg px-6 py-8 md:py-8 md:px-10 -mt-[100px] backdrop-blur-[30px] border border-gray-300">

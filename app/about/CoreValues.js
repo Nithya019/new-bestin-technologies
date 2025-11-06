@@ -44,7 +44,7 @@ const CoreValues = () => {
   ];
   const ref = useRef(null);
   return (
-    <section className="px-6 py-10 text-black">
+    <section className="px-6 py-10 text-foreground">
       <h2 className="text-3xl font-bold text-center text-gray-800 pb-8 italic">
         Core Values
       </h2>

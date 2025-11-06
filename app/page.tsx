@@ -1,27 +1,28 @@
 "use client";
 
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import {
   HomeSlider,
   AboutSlider,
   ServiceSlider,
-  ContactSlider
+  ContactSlider,
 } from "./landing/SliderContent";
+
+type SliderData = {
+  name: string;
+  id: string;
+  imgSrc: string;
+};
 
 const SliderComponents: { [key: string]: React.FC } = {
   home: HomeSlider,
   about: AboutSlider,
   services: ServiceSlider,
-  contact: ContactSlider
+  contact: ContactSlider,
 };
 
-function Slider({ id }: { id: string }) {
+function Slider({ slider }: { slider: SliderData }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -29,32 +30,56 @@ function Slider({ id }: { id: string }) {
   });
   const smoothScrollYProgress = useSpring(scrollYProgress, { damping: 60 });
   const scale = useTransform(smoothScrollYProgress, [0, 1], [1.5, 1]);
-   const isAboutSlider = id === 'about' ? true: false;
+  const isAboutSlider = slider.id === "about" ? true : false;
   return (
-    <section className={`img-container ${isAboutSlider ? 'justify-center': ''}`}>
-      {isAboutSlider ? <AboutSlider /> : <>
-      <div className="img-div" ref={ref}>
-        <motion.img
-          src={`/images/${id}.avif`}
-          alt={id}
-          style={{ scale }}
-          className="object-cover"
-        />
-      </div>
-      <div className={`slider-content slider-${id} text-white lg:w-1/2 right-0 top-1/2 -translate-y-1/2 m-4`}>
-        {SliderComponents[id] && React.createElement(SliderComponents[id])}{" "}
-      </div></> }
+    <section
+      className={`img-container overflow-hidden ${
+        isAboutSlider ? "justify-center" : ""
+      }`}
+    >
+      {isAboutSlider ? (
+        <AboutSlider />
+      ) : (
+        <>
+          <div className="img-div" ref={ref}>
+            <motion.img
+              src={slider.imgSrc}
+              alt={slider.id}
+              style={{ scale }}
+              className="object-cover"
+            />
+          </div>
+          {slider.id === "home" ? (
+            <div className={`slider-content slider-${slider.id} lg:w-1/2 right-0 top-1/2 -translate-y-1/2 mx-2`}>
+              {SliderComponents[slider.id] &&
+                React.createElement(SliderComponents[slider.id])}
+            </div>
+          ) : (
+            <div
+              className={`slider-content slider-${slider.id} text-white lg:w-1/2 right-0 top-1/2 -translate-y-1/2 m-4`}
+            >
+              {SliderComponents[slider.id] &&
+                React.createElement(SliderComponents[slider.id])}
+            </div>
+          )}
+        </>
+      )}
     </section>
   );
 }
 
 export default function Parallax() {
-  const sliders = ["home", "services", "about", "contact"];
+  const sliders = [
+    { name: "home", id: "home", imgSrc: "/images/home.jpg" },
+    { name: "services", id: "services", imgSrc: "/images/services.avif" },
+    { name: "about", id: "about", imgSrc: "/images/home.jpg" },
+    { name: "contact", id: "contact", imgSrc: "/images/contact.jpg" },
+  ];
   return (
     <>
       <div id="slider">
         {sliders.map((slider) => (
-          <Slider key={slider} id={slider} />
+          <Slider key={slider.name} slider={slider} />
         ))}
         <StyleSheet />
       </div>

@@ -6,18 +6,17 @@ import { TextFade } from "../../components/motion/TextFade";
 
 export default function About() {
   return (
-    <section className="text-black shadow-lg">
-      <div className="w-full h-screen bg-black">
+    <section className="text-foreground shadow-lg">
+      <div className="w-full h-screen bg-black overflow-hidden">
         <motion.img
-          src="/images/aboutUs.avif"
+          src="/images/aboutHeroImg.avif"
           alt="About Us"
-          // whileInView={{ scale: 1.2 }}
           className="object-cover w-full h-full"
-          initial={{ scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ scale: 1 }}
+          animate={{ opacity: 1, scale: 1.2 }}
           transition={{ duration: 1.2 }}
         />
-        <div className="absolute inset-0 bg-black/[.50] bg-opacity-50"></div>
+        {/* <div className="absolute inset-0 bg-black/[.20] bg-opacity-50"></div> */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <TextFade
             direction="up"

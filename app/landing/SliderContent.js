@@ -7,7 +7,7 @@ import { TextFade } from "../../components/motion/TextFade";
 function HomeSlider() {
   return (
     <TextFade>
-      <h2 className="text-[40px]">
+      <h2 className="text-[40px] text-white">
         <p>Welcome to Bestin Technologies Limited!</p><p> Your Trusted IT Consulting
         Partner!!</p>
       </h2>
@@ -40,11 +40,11 @@ function AboutSlider() {
     },
   ];
   return (
-    <div className=" justify-center items-center p-10">
-      <div className="">
-        <h1 className="text-5xl pb-10 text-center font-bold">About Us</h1>
+    <div className=" flex text-center justify-center items-center p-10 flex-col">
+      <div className="w-4xl mx-auto">
+        <h1 className="text-5xl  pb-10 text-center font-bold text-slate-600">About Us</h1>
         <TextFade>
-          <p className="text-lg text-center lg:pb-20 lg:px-30">
+          <p className="text-lg text-center">
             Bestin Technologies Limited is a Canada-based IT consulting firm
             that specializes in providing top-tier solutions for businesses
             seeking to harness the power of data engineering, cloud computing,
@@ -60,7 +60,7 @@ function AboutSlider() {
               initial={{ opacity: 0, y: -100, scale: 0.5 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 1 }}
-              className={`rounded bg-[#4ff0b7] p-10`}
+              className={`rounded bg-blue p-10 text-background`}
               key={value.title}
             >
               <h2 className="text-xl text-center pb-6 italic">
@@ -90,7 +90,7 @@ function ServiceSlider() {
     },
   ];
   return (
-    <div className="p-8 bg-black/[.50] rounded">
+    <div className="p-8 bg-black/[.70] rounded">
       <TextFade>
         <h1 className="text-5xl pb-4">Services</h1>
 
@@ -124,7 +124,7 @@ function ServiceSlider() {
 
 function ContactSlider() {
   return (
-    <div className="p-8 bg-black/[.50] rounded">
+    <div className="p-8 bg-black/[.70] rounded">
       <TextFade>
         <h1 className="text-5xl pb-4">Why Choose Us?</h1>
       </TextFade>

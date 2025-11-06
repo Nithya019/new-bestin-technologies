@@ -15,7 +15,7 @@ export default function NavLinks() {
         return (
           <li key={link.name}>
             <Link
-              className={pathname === link.href ? "font-bold text-[#4ff0b7]" : "font-bold"}
+              className={pathname === link.href ? "text-blue font-medium" : "font-medium"}
               href={link.href}
             >
               {link.name}

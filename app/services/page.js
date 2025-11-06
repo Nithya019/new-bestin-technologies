@@ -9,17 +9,17 @@ import { MdOutlineLibraryBooks } from "react-icons/md";
 
 export default function About() {
   return (
-    <section className="text-black bg-gray-100 shadow-lg">
-      <div className="w-full h-screen bg-black">
+    <section className="text-foreground bg-gray-100 shadow-lg">
+      <div className="w-full h-screen bg-black overflow-hidden">
         <motion.img
-          src="/images/servicesPage.avif"
+          src="/images/servicesHeroImg.avif"
           alt="About Us"
           className="object-cover w-full h-full"
-          initial={{ scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ scale: 1 }}
+          animate={{ opacity: 1, scale: 1.2 }}
           transition={{ duration: 1.2 }}
         />
-        <div className="absolute inset-0 bg-black/[.50] bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black/[.20] bg-opacity-50"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <TextFade
             direction="up"
@@ -57,11 +57,11 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 animate-fade-in">
             <TextFade>
-              <FaArrowUp className="h-12 w-12 text-[#4ff0b7] mb-4" />
-              <h2 className="text-xl font-semibold italic text-black mb-4">
+              <FaArrowUp className="h-12 w-12 text-blue mb-4" />
+              <h2 className="text-xl font-semibold italic text-foreground mb-4">
                 ETL/ELT Solutions (On-Premises & Cloud)
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-800">
                 We specialize in data extraction, transformation, and loading
                 (ETL/ELT) using industry-leading tools such as Informatica,
                 SSIS, Azure Data Factory (ADF), and Databricks to optimize data
@@ -72,11 +72,11 @@ export default function About() {
 
           <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 animate-fade-in">
             <TextFade>
-              <FaCloud className="h-12 w-12 text-[#4ff0b7] mb-4" />
-              <h2 className="text-xl font-semibold italic text-black mb-4">
+              <FaCloud className="h-12 w-12 text-blue mb-4" />
+              <h2 className="text-xl font-semibold italic text-foreground mb-4">
                 Cloud Data Engineering & Microsoft Fabric
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 Harness the power of the cloud with our expertise in Azure
                 Synapse, Azure Databricks, and Microsoft Fabric. We design and
                 implement scalable cloud solutions that drive data processing,
@@ -87,11 +87,11 @@ export default function About() {
 
           <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 animate-fade-in">
             <TextFade>
-              <FiSettings className="h-12 w-12 text-[#4ff0b7] mb-4" />
-              <h2 className="text-xl font-semibold italic text-black mb-4">
+              <FiSettings className="h-12 w-12 text-blue mb-4" />
+              <h2 className="text-xl font-semibold italic text-foreground mb-4">
                 Azure DevOps & CI/CD Pipelines
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 Our team ensures seamless software development and deployment
                 with Azure DevOps, GitHub Actions, and Jenkins, enabling
                 automated builds, testing, and deployments.
@@ -101,11 +101,11 @@ export default function About() {
 
           <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 animate-fade-in">
             <TextFade>
-              <TbBulbFilled className="h-12 w-12 text-[#4ff0b7] mb-4" />
-              <h2 className="text-xl font-semibold italic text-black mb-4">
+              <TbBulbFilled className="h-12 w-12 text-blue mb-4" />
+              <h2 className="text-xl font-semibold italic text-foreground mb-4">
                 Data Science & AI Solutions
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 Unlock actionable insights with our data science services,
                 including predictive analytics, machine learning, and AI-driven
                 solutions.
@@ -115,11 +115,11 @@ export default function About() {
 
           <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 animate-fade-in">
             <TextFade>
-              <FaChartBar className="h-12 w-12 text-[#4ff0b7] mb-4" />
-              <h2 className="text-xl font-semibold italic text-black mb-4">
+              <FaChartBar className="h-12 w-12 text-blue mb-4" />
+              <h2 className="text-xl font-semibold italic text-foreground mb-4">
                 Business Intelligence & Power BI Report Building
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 We develop interactive dashboards and reports using Power BI to
                 help businesses visualize and analyze their data effectively for
                 informed decision-making.
@@ -129,11 +129,11 @@ export default function About() {
 
           <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 animate-fade-in">
             <TextFade>
-              <SiWebex className="h-12 w-12 text-[#4ff0b7] mb-4" />
-              <h2 className="text-xl font-semibold italic text-black mb-4">
+              <SiWebex className="h-12 w-12 text-blue mb-4" />
+              <h2 className="text-xl font-semibold italic text-foreground mb-4">
                 Full-Stack Web Development
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 Our development team delivers robust, scalable, and
                 user-friendly web applications using React, Angular, .NET,
                 Python, and Node.js to meet diverse business needs.
@@ -143,11 +143,11 @@ export default function About() {
 
           <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 animate-fade-in">
             <TextFade>
-              <MdOutlineLibraryBooks className="h-12 w-12 text-[#4ff0b7] mb-4" />
-              <h2 className="text-xl font-semibold italic text-black mb-4">
+              <MdOutlineLibraryBooks className="h-12 w-12 text-blue mb-4" />
+              <h2 className="text-xl font-semibold italic text-foreground mb-4">
                 Software Testing (Manual & Automation)
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 We provide comprehensive QA testing services, including manual
                 testing, automation testing with Selenium, Cypress, and API
                 testing to ensure software reliability and performance.
