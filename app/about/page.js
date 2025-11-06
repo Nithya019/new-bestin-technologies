@@ -7,7 +7,7 @@ import { TextFade } from "../../components/motion/TextFade";
 export default function About() {
   return (
     <section className="text-foreground shadow-lg">
-      <div className="w-full h-screen bg-black overflow-hidden">
+      <div className="w-full h-screen overflow-hidden">
         <motion.img
           src="/images/aboutHeroImg.avif"
           alt="About Us"

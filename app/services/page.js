@@ -10,7 +10,7 @@ import { MdOutlineLibraryBooks } from "react-icons/md";
 export default function About() {
   return (
     <section className="text-foreground bg-gray-100 shadow-lg">
-      <div className="w-full h-screen bg-black overflow-hidden">
+      <div className="w-full h-screen overflow-hidden">
         <motion.img
           src="/images/servicesHeroImg.avif"
           alt="About Us"
