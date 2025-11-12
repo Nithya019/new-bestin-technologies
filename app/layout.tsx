@@ -18,7 +18,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Bestin Technologies Limited",
+  title: "Bestin Technologies",
   description: "Your Trusted IT Consulting Partner",
 };
 
