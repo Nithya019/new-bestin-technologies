@@ -1,22 +1,24 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import Image from 'next/image'
+import Image from "next/image";
 import { TextFade } from "../../components/motion/TextFade";
 
 const Contact = () => {
   return (
     <section className="mb-6">
-      <div
-        className="relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
-      >
-
-      <Image src="/images/contactHeroImg.avif" className="object-center object-cover" alt="Contact Us" fill/>
+      <div className="relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+        <Image
+          src="/images/contactHeroImg.avif"
+          className="object-center object-cover"
+          alt="Contact Us"
+          fill
+        />
       </div>
       <div className="container px-6 md:px-12">
         <div className="block rounded-lg px-6 py-8 md:py-8 md:px-10 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
           <div className="flex flex-wrap">
-            <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
+            {/* <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
               <form>
                 <div className="mb-3 w-full">
                   <label
@@ -69,20 +71,20 @@ const Contact = () => {
                   Send
                 </button>
               </form>
-            </div>
-            <div className="text-center w-full shrink-0 grow-0 basis-auto lg:w-7/12 pt-4 italic">
-            <TextFade>
-            <h2 className="text-4xl font-bold text-gray pb-4">Our Vision</h2>
-            <p className="text-xl pb-2">
-            <MdEmail className="inline"/> contact@bestintechnologies.com
-            </p>
-            <p className="text-xl pb-2">
-            <FaPhoneAlt className="inline"/> +1 3689991222
-            </p>
-            <p className="text-xl">
-            Canada - Calgary
-            </p>
-            </TextFade>
+            </div> */}
+            <div className="text-center w-full h-80 pt-4">
+              <TextFade>
+                <h2 className="text-4xl font-bold text-gray pb-6">
+                  Contact Us
+                </h2>
+                <p className="text-xl pb-2">
+                  <MdEmail className="inline" /> contact@bestintechnologies.com
+                </p>
+                <p className="text-xl pb-2">
+                  <FaPhoneAlt className="inline" /> +1 3689991222
+                </p>
+                <p className="text-xl">Canada - Calgary</p>
+              </TextFade>
             </div>
           </div>
         </div>
